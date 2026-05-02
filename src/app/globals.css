@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black:    #000000;
+  --s1:       #0a0a0a;
+  --s2:       #111111;
+  --s3:       #1a1a1a;
+  --s4:       #202020;
+  --gold:     #FFC000;
+  --gold-dk:  #917300;
+  --gold-lt:  #FFD84D;
+  --white:    #FFFFFF;
+  --ash:      #7D7D7D;
+  --border:   rgba(255,255,255,0.07);
+  --border-g: rgba(255,192,0,0.18);
+  --ease:     cubic-bezier(.16,1,.3,1);
+}
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: #000000;
+    color: #FFFFFF;
+    font-family: var(--font-inter), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Custom cursor — only on pointer devices */
+  @media (pointer: fine) {
+    body { cursor: none; }
+    a, button { cursor: none; }
+  }
+
+  :focus-visible {
+    outline: 2px solid #FFC000;
+    outline-offset: 2px;
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #000; }
+  ::-webkit-scrollbar-thumb { background: #202020; }
+  ::-webkit-scrollbar-thumb:hover { background: #FFC000; }
+}
+
+/* ── HERO GRID ──────────────────────────────── */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255,192,0,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,192,0,.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+  animation: gridMove 20s linear infinite;
+}
+@keyframes gridMove {
+  0%   { transform: translate(0,0); }
+  100% { transform: translate(72px,72px); }
+}
+
+/* ── HERO GLOW ──────────────────────────────── */
+.hero-glow {
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70vw;
+  height: 70vw;
+  max-width: 900px;
+  background: radial-gradient(circle, rgba(255,192,0,.08) 0%, transparent 60%);
+  pointer-events: none;
+  animation: glowPulse 4s ease-in-out infinite;
+}
+@keyframes glowPulse {
+  0%,100% { opacity: .7; transform: translateX(-50%) scale(1); }
+  50%     { opacity: 1;  transform: translateX(-50%) scale(1.08); }
+}
+
+/* ── HERO SIDE LINES ────────────────────────── */
+.hero-line {
+  bottom: 0;
+  width: 1px;
+  height: 40%;
+  background: linear-gradient(to top, transparent, rgba(255,192,0,.2));
+  opacity: 0;
+  animation: lineRise 3s ease-out forwards;
+}
+.hero-line-l { left: 12%; animation-delay: .5s; }
+.hero-line-r { right: 12%; animation-delay: .8s; }
+@keyframes lineRise {
+  from { opacity: 0; height: 0; }
+  to   { opacity: 1; height: 40%; }
+}
+
+/* ── HERO LOGO ──────────────────────────────── */
+.hero-logo-img {
+  filter: drop-shadow(0 0 40px rgba(255,192,0,.55)) drop-shadow(0 0 80px rgba(255,192,0,.2));
+  animation: logoFloat 6s ease-in-out infinite 1.2s;
+}
+@keyframes logoFloat {
+  0%,100% { transform: translateY(0) rotate(0deg); }
+  33%     { transform: translateY(-8px) rotate(.5deg); }
+  66%     { transform: translateY(-4px) rotate(-.5deg); }
+}
+
+/* ── SCROLL MOUSE INDICATOR ─────────────────── */
+.scroll-mouse {
+  width: 22px;
+  height: 36px;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 11px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+.scroll-dot {
+  width: 4px;
+  height: 8px;
+  background: #FFC000;
+  border-radius: 2px;
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+@keyframes scrollBounce {
+  0%,100% { transform: translateY(0); opacity: 1; }
+  60%     { transform: translateY(10px); opacity: 0; }
+}
+
+/* ── CUSTOM CURSOR ──────────────────────────── */
+#cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+#cursor-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #FFC000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width .15s, height .15s;
+}
+#cursor-ring {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255,192,0,.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width .3s, height .3s, opacity .3s;
+}
+/* Expand on interactive elements */
+body:has(a:hover) #cursor-dot,
+body:has(button:hover) #cursor-dot { width: 12px; height: 12px; }
+body:has(a:hover) #cursor-ring,
+body:has(button:hover) #cursor-ring { width: 52px; height: 52px; }
+
+/* ── SCROLL PROGRESS BAR ────────────────────── */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--gold-dk), var(--gold), var(--gold-lt));
+  z-index: 200;
+  width: 0%;
+  transition: width .1s linear;
+  transform-origin: left;
+}
+
+/* ── SECTION LABEL ──────────────────────────── */
+.section-label {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  color: #FFC000;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: #FFC000;
+  flex-shrink: 0;
+}
+
+/* ── prefers-reduced-motion ─────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,*::before,*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

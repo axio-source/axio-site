@@ -1,0 +1,56 @@
+{
+  "gerado_por": "UI UX Pro Max — dark luxury consulting, Next.js + Tailwind",
+  "estilo": "dark-luxury",
+  "industria": "consultoria empresarial B2B",
+  "colors": {
+    "background": "#000000",
+    "surface": "#202020",
+    "surface_dark": "#181818",
+    "gold": "#FFC000",
+    "gold_dark": "#917300",
+    "white": "#FFFFFF",
+    "ash": "#7D7D7D",
+    "border_ghost": "rgba(255,255,255,0.5)"
+  },
+  "typography": {
+    "display": {
+      "family": "Bebas Neue",
+      "source": "Google Fonts",
+      "weight": "400",
+      "case": "uppercase"
+    },
+    "body": {
+      "family": "Inter",
+      "source": "Google Fonts",
+      "weight": "400/500/600"
+    }
+  },
+  "spacing": {
+    "base": "8px",
+    "section_padding_y": "128px",
+    "section_padding_x": "32px",
+    "button_padding": "16px 40px (gold) / 14px 32px (ghost)"
+  },
+  "borders": {
+    "radius": "0px",
+    "width": "1px",
+    "color_divider": "#202020"
+  },
+  "animation": {
+    "duration": "0.8s",
+    "easing": "easeOut",
+    "reduced_motion": "respeitar prefers-reduced-motion"
+  },
+  "accessibility": {
+    "contrast_body": "21:1 (branco sobre preto)",
+    "contrast_ash": "5.9:1 (ash sobre preto)",
+    "touch_target_min": "44px",
+    "focus_visible": "outline 2px solid #FFC000"
+  },
+  "ui_ux_pro_guidelines": [
+    "Dark mode luxury: high contrast, minimal chromatic color, premium spacing",
+    "B2B consulting: trust signals above the fold, clear value props, authority markers",
+    "Performance: lazy images, prefers-reduced-motion support, CLS < 0.1",
+    "Accessibility: WCAG AA compliant, keyboard navigation, ARIA labels"
+  ]
+}
