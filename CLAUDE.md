@@ -5,7 +5,7 @@
 ## O projeto
 
 Site institucional da **Axio** — consultoria de receita e automação para PMEs.
-Stack: Next.js 14 (App Router) + Tailwind CSS + Framer Motion.
+Stack: Next.js 14 (App Router) + Tailwind CSS + Framer Motion. 
 
 ## Regras do design system (inegociáveis)
 
