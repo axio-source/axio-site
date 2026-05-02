@@ -23,7 +23,7 @@ function CharReveal({
 
   return (
     <span className={className} aria-label={text}>
-      {[...text].map((char, i) => (
+      {text.split('').map((char, i) => (
         <motion.span
           key={i}
           className="inline-block"
