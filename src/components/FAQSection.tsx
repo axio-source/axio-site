@@ -18,7 +18,7 @@ const faqs = [
   {
     pergunta: 'Em quanto tempo vejo resultados?',
     resposta:
-      'Depende do tipo de intervenção. Automações de processo podem ser implementadas em dias e os ganhos de tempo aparecem na semana seguinte. Reestruturação de receita costuma levar de 4 a 8 semanas para mostrar impacto mensurável. O que não fazemos é prometer prazo sem entender o seu negócio.',
+      'Depende do tipo de intervenção. Automações de processo mostram resultado na semana seguinte. Reestruturação de receita leva de 4 a 8 semanas para ter impacto mensurável. A velocidade depende do gargalo, por isso o diagnóstico vem antes de qualquer compromisso de prazo.',
   },
   {
     pergunta: 'A Axio implementa as melhorias ou só aponta o caminho?',
@@ -28,7 +28,7 @@ const faqs = [
   {
     pergunta: 'Como é feita a precificação?',
     resposta:
-      'Cada projeto é precificado de acordo com o escopo e o impacto esperado. Não temos pacotes fechados porque cada empresa tem uma realidade diferente. A conversa inicial é sem compromisso: queremos entender se faz sentido para os dois lados.',
+      'Cada projeto é precificado de acordo com o escopo e o resultado esperado. Não existe pacote fechado porque cada empresa tem uma realidade diferente. A conversa inicial é sem compromisso. O objetivo dela é entender se faz sentido antes de qualquer proposta.',
   },
 ]
 

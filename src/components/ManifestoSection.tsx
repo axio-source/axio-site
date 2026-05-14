@@ -17,9 +17,21 @@ export function ManifestoSection() {
 
         <FadeInUp delay={0.2}>
           <p className="font-body text-lg md:text-xl text-ash leading-relaxed max-w-2xl">
-            PMEs que chegam à Axio não têm problema de dedicação. Têm problema de foco:
-            estão trabalhando duro no lugar errado. A Axio existe para apontar o lugar
-            certo e estruturar o caminho mais curto até lá.
+            PMEs que chegam até aqui não têm problema de dedicação. Têm problema de foco:
+            estão trabalhando duro no lugar errado.
+          </p>
+        </FadeInUp>
+
+        <FadeInUp delay={0.32}>
+          <p className="font-body text-lg md:text-xl text-ash leading-relaxed max-w-2xl mt-6">
+            O resultado é sempre o mesmo. Receita travada, equipe que não executa sem
+            supervisão, e um dono que virou o maior gargalo do próprio negócio.
+          </p>
+        </FadeInUp>
+
+        <FadeInUp delay={0.44}>
+          <p className="font-body text-lg md:text-xl text-ash leading-relaxed max-w-2xl mt-6">
+            A Axio existe para quebrar esse ciclo. Não com conselho. Com implementação.
           </p>
         </FadeInUp>
       </div>

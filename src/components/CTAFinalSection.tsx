@@ -20,19 +20,20 @@ export function CTAFinalSection() {
 
         <FadeInUp delay={0.1}>
           <h2 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none text-white mb-4">
-            SE VOCÊ CHEGOU ATÉ AQUI,
+            VOCÊ NÃO PRECISA DE MAIS ESFORÇO.
           </h2>
         </FadeInUp>
 
         <FadeInUp delay={0.2}>
           <h2 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none text-gold mb-10">
-            SUA EMPRESA TEM MAIS A FATURAR.
+            PRECISA DO SISTEMA CERTO.
           </h2>
         </FadeInUp>
 
         <FadeInUp delay={0.3}>
           <p className="font-body text-lg md:text-xl text-ash mb-14 leading-relaxed max-w-xl mx-auto">
-            Uma conversa com a Axio muda o que você está olhando.
+            A Axio mapeia o que está travando o crescimento da sua empresa e implementa
+            junto com o seu time. 30 minutos de conversa, sem compromisso e sem pacote fechado.
           </p>
         </FadeInUp>
 

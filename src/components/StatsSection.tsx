@@ -4,13 +4,13 @@ import { useEffect, useRef, useState } from 'react'
 import { useInView } from 'framer-motion'
 
 const stats = [
-  { value: 30, suffix: ' dias', label: 'Primeiros resultados' },
-  { value: 3,  suffix: 'x',    label: 'Crescimento de receita' },
-  { value: 100, suffix: '%',   label: 'Foco em resultado real' },
-  { value: 0,  suffix: '',     label: 'Tolerância à mediocridade' },
+  { value: 30, suffix: ' dias', label: 'Para impacto mensurável' },
+  { value: 7,  suffix: 'x',    label: 'Aumento de produtividade' },
+  { value: 49, suffix: '%',    label: 'Crescimento médio de receita' },
+  { value: 12, suffix: 'h/sem', label: 'Devolvidas por automação', prefix: '+' },
 ]
 
-function Counter({ value, suffix }: { value: number; suffix: string }) {
+function Counter({ value, suffix, prefix = '' }: { value: number; suffix: string; prefix?: string }) {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true })
   const [count, setCount] = useState(0)
@@ -33,8 +33,8 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   }, [isInView, value])
 
   return (
-    <div ref={ref} className="font-display text-[56px] md:text-[64px] leading-none text-gold mb-2" style={{ textShadow: '0 0 40px rgba(255,192,0,.3)' }}>
-      {count}{suffix}
+    <div ref={ref} className="font-display text-[clamp(28px,7.5vw,64px)] leading-none text-gold mb-2" style={{ textShadow: '0 0 40px rgba(255,192,0,.3)' }}>
+      {prefix}{count}{suffix}
     </div>
   )
 }
@@ -54,7 +54,7 @@ export function StatsSection() {
               className="text-center px-6 py-2"
               style={{ borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.07)' : 'none' }}
             >
-              <Counter value={s.value} suffix={s.suffix} />
+              <Counter value={s.value} suffix={s.suffix} prefix={s.prefix} />
               <p className="font-body text-xs text-ash tracking-[2px] uppercase">{s.label}</p>
             </div>
           ))}

@@ -21,20 +21,34 @@ function CharReveal({
 
   if (reduced) return <span className={className}>{text}</span>
 
+  const words = text.split(' ')
+  let charCount = 0
+
   return (
     <span className={className} aria-label={text}>
-      {text.split('').map((char, i) => (
-        <motion.span
-          key={i}
-          className="inline-block"
-          aria-hidden="true"
-          initial={{ opacity: 0, y: 60, skewY: 4 }}
-          animate={{ opacity: 1, y: 0, skewY: 0 }}
-          transition={{ duration: 0.6, delay: delay + i * 0.03, ease: EASE }}
-        >
-          {char === ' ' ? ' ' : char}
-        </motion.span>
-      ))}
+      {words.map((word, wi) => {
+        const startIdx = charCount
+        charCount += word.length + 1
+        return (
+          <span key={wi}>
+            <span style={{ display: 'inline-block', whiteSpace: 'nowrap' }}>
+              {word.split('').map((char, ci) => (
+                <motion.span
+                  key={ci}
+                  className="inline-block"
+                  aria-hidden="true"
+                  initial={{ opacity: 0, y: 60, skewY: 4 }}
+                  animate={{ opacity: 1, y: 0, skewY: 0 }}
+                  transition={{ duration: 0.6, delay: delay + (startIdx + ci) * 0.03, ease: EASE }}
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </span>
+            {wi < words.length - 1 && ' '}
+          </span>
+        )
+      })}
     </span>
   )
 }
@@ -85,7 +99,7 @@ export function HeroSection() {
 
         {/* Eyebrow */}
         <motion.p {...fade(0.8)} className="font-body text-[11px] text-gold tracking-[5px] uppercase mb-5">
-          Consultoria · Receita · Automação
+          Para empresas que faturam R$3M+ e crescem abaixo do potencial
         </motion.p>
 
         {/* H1 — char por char */}
@@ -96,8 +110,8 @@ export function HeroSection() {
 
         {/* Subheadline */}
         <motion.p {...fade(1.6)} className="font-body text-lg text-ash max-w-xl mx-auto mb-12 leading-relaxed">
-          A Axio mapeia onde sua empresa está perdendo receita e o que está
-          roubando o tempo da sua equipe. Resolve os dois com método, não com achismo.
+          Mapeamos onde a sua empresa está perdendo receita e o que está sugando o tempo da equipe.
+          A diferença: a Axio não entrega relatório. Implementa.
         </motion.p>
 
         {/* CTAs */}
