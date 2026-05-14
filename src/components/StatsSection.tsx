@@ -5,7 +5,7 @@ import { useInView } from 'framer-motion'
 
 const stats = [
   { value: 30, suffix: ' dias', label: 'Para impacto mensurável' },
-  { value: 7,  suffix: 'x',    label: 'Aumento de produtividade' },
+  { value: 4,  suffix: 'x',    label: 'Aumento de produtividade' },
   { value: 49, suffix: '%',    label: 'Crescimento médio de receita' },
   { value: 12, suffix: 'h/sem', label: 'Devolvidas por automação', prefix: '+' },
 ]

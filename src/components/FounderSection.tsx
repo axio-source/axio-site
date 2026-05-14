@@ -46,27 +46,15 @@ export function FounderSection() {
                 MIYASHIRO
               </h2>
 
-              <p className="font-body text-xs text-ash tracking-[3px] uppercase mb-10">
+              <p className="font-body text-xs text-ash tracking-[3px] uppercase mb-4">
                 Fundador & CEO
               </p>
-
-              <div className="flex flex-col gap-5 mb-10">
-                <p className="font-body text-lg text-ash leading-relaxed">
-                  Antes de fundar a Axio, Rodrigo passou 8 anos como desenvolvedor e Tech Lead em BTG Pactual e Axia Futures, em Londres. Não são credenciais para impressionar. São os ambientes onde aprendeu que sistema que falha custa dinheiro de verdade, e que ninguém espera reunião de alinhamento quando o mercado não espera.
-                </p>
-                <p className="font-body text-lg text-ash leading-relaxed">
-                  Quando foi estudar o mercado de automação no Brasil a fundo, o que encontrou foi frustrante: tecnologia genérica empacotada como solução, sem ninguém entender o problema de verdade. Bots de WhatsApp. Fluxos que qualquer estagiário replicaria. Consultores que entregam slide e somem.
-                </p>
-                <p className="font-body text-lg text-ash leading-relaxed">
-                  A Axio existe porque esse padrão tem custo real. Cada projeto tem escopo definido, prazo real e um número para bater. O cliente termina sabendo operar o que foi construído, sem depender de ninguém.
-                </p>
-              </div>
 
               <a
                 href="https://www.linkedin.com/in/rdgmiyashiro/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 font-body text-sm text-gold tracking-[2px] uppercase hover:opacity-70 transition-opacity duration-200 self-start"
+                className="inline-flex items-center gap-3 font-body text-sm text-gold tracking-[2px] uppercase hover:opacity-70 transition-opacity duration-200 self-start mb-10"
                 aria-label="LinkedIn de Rodrigo Miyashiro"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -74,6 +62,26 @@ export function FounderSection() {
                 </svg>
                 LinkedIn
               </a>
+
+              <div className="flex flex-col gap-5 mb-10">
+                <p className="font-body text-lg text-ash leading-relaxed">
+                  Antes de fundar a Axio, Rodrigo passou 8 anos como desenvolvedor e Tech Lead em grandes empresas, como BTG Pactual e Axia Futures sediada em Londres. Ambientes onde sistema que falha custa dinheiro de verdade, e ninguém espera reunião de alinhamento quando o mercado não espera.
+                </p>
+                <p className="font-body text-lg text-ash leading-relaxed">
+                  Quando foi estudar o mercado de automação no Brasil, o que encontrou foi frustrante. Bots de WhatsApp vendidos como transformação digital. Fluxos que qualquer estagiário replicaria, embalados como tecnologia de ponta. Consultores que entregam slide e somem.
+                </p>
+                <p className="font-body text-lg text-ash leading-relaxed">
+                  A Axio existe porque esse padrão tem custo real. Cada projeto tem escopo definido, prazo real e um número para bater. O cliente termina sabendo operar o que foi construído, sem depender de ninguém.
+                </p>
+              </div>
+
+              <div className="pt-2">
+                <div className="w-full h-px bg-gold/40 mb-5" />
+                <p className="font-body text-sm text-ash/60 leading-relaxed">
+                  Formação contínua: mentorias com Alex Hormozi e Dan Martell. Certificações Anthropic em desenvolvimento com Claude, incluindo AI Fluency: Framework & Foundations.
+                </p>
+              </div>
+
             </div>
           </FadeInUp>
 

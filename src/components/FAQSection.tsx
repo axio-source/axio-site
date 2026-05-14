@@ -28,7 +28,7 @@ const faqs = [
   {
     pergunta: 'Como é feita a precificação?',
     resposta:
-      'Cada projeto é precificado de acordo com o escopo e o resultado esperado. Não existe pacote fechado porque cada empresa tem uma realidade diferente. A conversa inicial é sem compromisso. O objetivo dela é entender se faz sentido antes de qualquer proposta.',
+      'Projetos a partir de R$10k. Cada projeto é precificado de acordo com o escopo e o resultado esperado. Não existe pacote fechado porque cada empresa tem uma realidade diferente. A conversa inicial é sem compromisso. O objetivo dela é entender se faz sentido antes de qualquer proposta.',
   },
 ]
 

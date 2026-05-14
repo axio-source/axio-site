@@ -3,20 +3,20 @@ import { FadeInUp } from './animations/FadeInUp'
 const depoimentos = [
   {
     texto: 'Cuidar da financeira sempre foi fazer conta no escuro. Faturamento entrava, conta saía, fornecedor, contador, mas a foto real do negócio nunca ficava clara. Estava crescendo ou só estava ocupada? A Axio construiu um painel com as métricas que importam: retenção, rentabilidade por atendimento, custo por cliente novo, margem real. Hoje sei exatamente o que está gerando resultado e onde estou perdendo sem perceber. Parei de administrar no chute.',
-    nome: 'Gestora',
+    nome: 'Tatiana',
     empresa: 'Espaço Pet Atibaia',
     segmento: 'Clínica Veterinária',
   },
   {
-    texto: 'Cada orçamento levava entre 6 e 12 horas da nossa equipe técnica. Para a Petrobras, estimamos mais de duas semanas de trabalho. O prazo deles era duas semanas. Perdemos a oportunidade antes mesmo de apresentar uma proposta. A Axio construiu um sistema que identifica equivalentes para sensores em segundos. Hoje o sistema faz em minutos o que travava a equipe por dias.',
-    nome: 'Diretor',
+    texto: 'Cada orçamento levava entre 6 e 12 horas da nossa equipe técnica. Para uma licitação federal, estimamos mais de duas semanas de trabalho. O prazo deles era duas semanas. Perdemos a oportunidade antes mesmo de apresentar uma proposta. A Axio construiu um sistema que identifica equivalentes para sensores em segundos. Hoje o sistema faz em minutos o que travava a equipe por dias.',
+    nome: 'Arnaldo',
     empresa: 'Secmil Engenharia',
     segmento: 'Engenharia Industrial',
   },
   {
     texto: 'Depois de cada reunião com cliente, alguém da equipe precisava atualizar o CRM, registrar o que foi discutido e identificar o que acompanhar. Feito na correria, fica incompleto. Deixado para depois, não volta. A Axio construiu um agente que lê a transcrição da reunião, atualiza o CRM e gera um relatório com os pontos que importam para o próximo contato. Nenhuma informação se perde. O follow-up começa exatamente de onde a conversa parou.',
     nome: 'Sócio',
-    empresa: 'Equity Capital',
+    empresa: 'Cliente sob NDA',
     segmento: 'Gestão Patrimonial',
   },
 ]
