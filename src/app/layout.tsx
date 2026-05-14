@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Bebas_Neue, Inter } from 'next/font/google'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 
 const bebasNeue = Bebas_Neue({
@@ -74,7 +75,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
-      <body className="font-body bg-black text-white antialiased">{children}</body>
+      <body className="font-body bg-black text-white antialiased">
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   )
 }
