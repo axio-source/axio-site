@@ -17,10 +17,13 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Axio — Consultoria de Receita e Automação para PMEs',
+  title: 'Axio — Consultoria de Receita e Automação para Empresas',
   description:
-    'A Axio identifica onde sua empresa está perdendo receita e o que pode ser automatizado hoje. Converse com a equipe.',
+    'A Axio identifica onde sua empresa está perdendo receita e o que pode ser automatizado. Implementamos junto com o seu time. Sem relatório, sem achismo.',
   metadataBase: new URL('https://axio.gold'),
+  alternates: {
+    canonical: 'https://axio.gold',
+  },
   icons: {
     icon: '/axio-logo.png',
     apple: '/axio-logo.png',
@@ -49,12 +52,31 @@ export const metadata: Metadata = {
 
 const organizationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
+  '@type': ['Organization', 'ProfessionalService'],
   name: 'Axio',
   description:
-    'Consultoria empresarial focada em aumentar faturamento e automatizar processos de PMEs',
-  url: 'https://axio.com.br',
-  logo: 'https://axio.com.br/axio-logo.jpg',
+    'Consultoria empresarial que aumenta o faturamento e automatiza processos de empresas através de melhoria de receita e eliminação de gargalos operacionais.',
+  url: 'https://axio.gold',
+  logo: 'https://axio.gold/axio-logo.png',
+  founder: {
+    '@type': 'Person',
+    name: 'Rodrigo Miyashiro',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'Brasil',
+  },
+  knowsAbout: [
+    'consultoria de receita',
+    'automação de processos',
+    'crescimento empresarial',
+    'otimização operacional',
+    'gestão de empresas mid-market',
+  ],
+  sameAs: [
+    'https://www.linkedin.com/company/axio-gold',
+    'https://www.instagram.com/axio.gold/',
+  ],
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer service',

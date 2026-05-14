@@ -9,7 +9,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-4">
           <Image
-            src="/axio-logo.jpg"
+            src="/axio-logo.png"
             alt="Axio"
             width={40}
             height={40}
