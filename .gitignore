@@ -21,3 +21,13 @@ dist/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Vercel
+.vercel/
+
+# Claude Code e MWP (uso local apenas)
+CLAUDE.md
+design-system/
+briefing/
+context/
+workers/
