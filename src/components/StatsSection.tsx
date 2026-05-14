@@ -13,13 +13,10 @@ const stats = [
 function Counter({ value, suffix, prefix = '' }: { value: number; suffix: string; prefix?: string }) {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true })
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(value)
 
   useEffect(() => {
-    if (!isInView || value === 0) {
-      setCount(value)
-      return
-    }
+    if (!isInView || value === 0) return
     const duration = 1800
     const start = performance.now()
     const easeOut = (t: number) => 1 - Math.pow(1 - t, 3)

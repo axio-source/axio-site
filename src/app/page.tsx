@@ -4,6 +4,7 @@ import { StatsSection } from '@/components/StatsSection'
 import { ManifestoSection } from '@/components/ManifestoSection'
 import { ComoFuncionaSection } from '@/components/ComoFuncionaSection'
 import { ClientesSection } from '@/components/ClientesSection'
+import { FounderSection } from '@/components/FounderSection'
 import { FAQSection } from '@/components/FAQSection'
 import { CTAFinalSection } from '@/components/CTAFinalSection'
 import { Footer } from '@/components/Footer'
@@ -21,6 +22,7 @@ export default function Home() {
       <ManifestoSection />
       <ComoFuncionaSection />
       <ClientesSection />
+      <FounderSection />
       <FAQSection />
       <CTAFinalSection />
       <Footer />

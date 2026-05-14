@@ -17,7 +17,7 @@ export function ManifestoSection() {
 
         <FadeInUp delay={0.2}>
           <p className="font-body text-lg md:text-xl text-ash leading-relaxed max-w-2xl">
-            PMEs que chegam até aqui não têm problema de dedicação. Têm problema de foco:
+            Empresas que chegam até aqui não têm problema de dedicação. Têm problema de foco:
             estão trabalhando duro no lugar errado.
           </p>
         </FadeInUp>
