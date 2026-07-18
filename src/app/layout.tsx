@@ -36,13 +36,11 @@ export const metadata: Metadata = {
     locale: 'pt_BR',
     siteName: 'Axio',
     url: 'https://axio.gold',
-    images: [{ url: '/opengraph-image.png', width: 1200, height: 630, alt: 'Axio' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Axio — Consultoria de Receita e Automação',
     description: 'Consultoria empresarial que aumenta faturamento e elimina gargalos.',
-    images: ['/opengraph-image.png'],
   },
   robots: {
     index: true,

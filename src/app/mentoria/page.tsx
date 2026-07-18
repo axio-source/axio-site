@@ -33,13 +33,76 @@ export const metadata: Metadata = {
     locale: 'pt_BR',
     siteName: 'Axio',
     url: 'https://axio.gold/mentoria',
-    images: [{ url: '/opengraph-image.png', width: 1200, height: 630, alt: 'Axio' }],
   },
+}
+
+const mentoriaSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://axio.gold/mentoria#service',
+  name: 'Mentoria IA Implantada',
+  serviceType: 'Mentoria de implementação de IA para empresas',
+  description:
+    'Programa de 4 encontros em que o dono da empresa sai com assistente de IA próprio treinado no negócio, um processo automatizado e a conta de IA auditada. Não é curso: é implementação, com garantia de continuar de graça até rodar.',
+  url: 'https://axio.gold/mentoria',
+  areaServed: { '@type': 'Country', name: 'Brasil' },
+  provider: {
+    '@type': 'Organization',
+    name: 'Axio',
+    url: 'https://axio.gold',
+    logo: 'https://axio.gold/axio-logo.png',
+  },
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'Em Grupo',
+      description: 'Os 4 encontros ao vivo em grupo, com stack completo e implementação guiada no seu negócio.',
+      price: '6000',
+      priceCurrency: 'BRL',
+      availability: 'https://schema.org/LimitedAvailability',
+      url: 'https://axio.gold/mentoria',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Individual',
+      description: 'Os 4 encontros 1:1 na sua agenda, com implementação feita junto, processo por processo.',
+      price: '12000',
+      priceCurrency: 'BRL',
+      availability: 'https://schema.org/LimitedAvailability',
+      url: 'https://axio.gold/mentoria',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Na Empresa',
+      description: 'Implementação dentro da operação com o time, diagnóstico Receita e Tempo e processo crítico rodando.',
+      price: '60000',
+      priceCurrency: 'BRL',
+      availability: 'https://schema.org/LimitedAvailability',
+      url: 'https://axio.gold/mentoria',
+    },
+  ],
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://axio.gold' },
+    { '@type': 'ListItem', position: 2, name: 'Mentoria', item: 'https://axio.gold/mentoria' },
+  ],
 }
 
 export default function MentoriaPage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(mentoriaSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <ScrollProgress />
       <MentoriaNavbar />
       <MentoriaHero />
