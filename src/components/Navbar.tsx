@@ -58,7 +58,10 @@ export function Navbar() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-3">
+            <Button variant="gold" size="sm" href="/mentoria" aria-label="Conhecer a mentoria">
+              MENTORIA
+            </Button>
             <Button variant="ghost" size="sm" href={WA_HREF} external aria-label="Falar com a Axio">
               FALAR COM A AXIO
             </Button>
@@ -98,11 +101,18 @@ export function Navbar() {
           </a>
         ))}
         <a
+          href="/mentoria"
+          onClick={() => setOpen(false)}
+          className="font-display text-5xl text-gold uppercase tracking-widest text-center"
+        >
+          Mentoria
+        </a>
+        <a
           href={WA_HREF}
           onClick={() => setOpen(false)}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-display text-5xl text-gold uppercase tracking-widest text-center"
+          className="font-display text-5xl text-white uppercase tracking-widest text-center"
         >
           Falar com a Axio
         </a>

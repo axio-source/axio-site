@@ -31,3 +31,6 @@ design-system/
 briefing/
 context/
 workers/
+
+# Rascunhos e notas (nao fazem parte do site)
+Changes.md
