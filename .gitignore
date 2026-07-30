@@ -7,6 +7,7 @@ node_modules/
 .next/
 out/
 dist/
+*.tsbuildinfo
 
 # Env
 .env
@@ -26,6 +27,7 @@ yarn-error.log*
 .vercel/
 
 # Claude Code e MWP (uso local apenas)
+.claude/
 CLAUDE.md
 design-system/
 briefing/
