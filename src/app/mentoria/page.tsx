@@ -34,6 +34,12 @@ export const metadata: Metadata = {
     siteName: 'Axio',
     url: 'https://axio.gold/mentoria',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'IA Implantada: sua empresa rodando com IA em 4 encontros',
+    description:
+      'Não é curso. Assistente próprio, processo automatizado e conta de IA auditada, com garantia de implementação. 12 vagas simultâneas.',
+  },
 }
 
 const mentoriaSchema = {
