@@ -62,7 +62,17 @@ export function Navbar() {
             <Button variant="gold" size="sm" href="/mentoria" aria-label="Conhecer a mentoria">
               MENTORIA
             </Button>
-            <Button variant="ghost" size="sm" href={WA_HREF} external aria-label="Falar com a Axio">
+            <Button variant="gold" size="sm" href="/sala-espelho" aria-label="Conhecer a Sala Espelho">
+              SALA ESPELHO
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              href={WA_HREF}
+              external
+              className="hidden lg:inline-flex"
+              aria-label="Falar com a Axio"
+            >
               FALAR COM A AXIO
             </Button>
           </div>
@@ -106,6 +116,13 @@ export function Navbar() {
           className="font-display text-5xl text-gold uppercase tracking-widest text-center"
         >
           Mentoria
+        </a>
+        <a
+          href="/sala-espelho"
+          onClick={() => setOpen(false)}
+          className="font-display text-5xl text-gold uppercase tracking-widest text-center"
+        >
+          Sala Espelho
         </a>
         <a
           href={WA_HREF}

@@ -35,6 +35,12 @@ export const metadata: Metadata = {
     siteName: 'Axio',
     url: 'https://axio.gold/sala-espelho',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sala Espelho: descubra antes de gastar a verba do cliente',
+    description:
+      'O painel reage à sua peça no mesmo dia, com veredito por persona e o score de qual variação rodar. Preço exato nas três portas.',
+  },
 }
 
 const salaEspelhoSchema = {

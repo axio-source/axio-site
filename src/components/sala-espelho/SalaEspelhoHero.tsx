@@ -21,7 +21,7 @@ export function SalaEspelhoHero() {
 
         <FadeInUp delay={0.1}>
           <h1 className="font-display uppercase text-4xl sm:text-6xl md:text-7xl leading-[1.05] text-white mb-8 max-w-4xl">
-            Sua agência descobre o que os clientes do seu cliente
+            Sua agência descobre o que os clientes do seu cliente{' '}
             <br />
             vão pensar da campanha, antes de <span className="text-gold">a verba subir</span>.
           </h1>
